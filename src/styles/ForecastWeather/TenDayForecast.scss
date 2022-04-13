@@ -1,0 +1,33 @@
+/* ========== Глобальные переменные ========== */
+@import "../variables.scss";
+
+/* ========== Глобальные переменные ========== */
+@import "../global.scss";
+
+.tenday-forecast{
+    display: flex;
+    justify-content: start;
+    overflow: hidden;
+
+    height: 100%;
+
+    padding-left: 8px;
+
+    .day-card{
+        margin-left: 0;
+        margin-right: 18px;
+    }
+}
+
+
+// медиа запросы для перехода от карточек к таблице
+@media (max-width:1220px){
+    .tenday-forecast{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 20px 0;
+    }
+}
+

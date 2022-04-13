@@ -1,0 +1,131 @@
+/* ========== Глобальные переменные ========== */
+@import "../variables.scss";
+
+/* ========== Глобальные стили ========== */
+@import "../global.scss";
+
+.main-block{
+    flex: 1 1 33.333%;
+    position: relative;
+    top: 0;
+    left: 0;
+    
+    max-width: 400px;
+    height: 300px;
+    
+    padding: 20px;
+    margin-right: 4.167%;
+    
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+}
+
+.main-block{
+    
+    &__row{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__item{
+
+        &_image{
+            width: 120px;
+            height: 120px;
+
+            margin-left: 10px;
+        
+            background-position: center;
+            background-repeat: no-repeat; 
+            background-size: cover; 
+        }
+    }
+
+    &__temp{
+        font-weight: 500;
+        font-size: 96px;
+        color: $blue-color-active;
+    }
+    &__title{
+        margin-bottom: 30px;     
+        font-size: 40px;
+    }
+    &__text{
+        margin-bottom: 14px;
+        font-size: 24px;
+    }
+}
+
+.main-block:after{
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 20px;           
+}
+
+
+
+
+// медиа запросы
+@media(max-width: 850px){
+    .main-block{
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin: 0 0 4%  0;
+        padding: 20px 30px;
+
+        &__item{
+
+            &_image{
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                
+                width: 160px;
+                height: 160px;
+            }
+        }
+    }
+}
+
+@media(max-width: 600px){
+    .main-block{
+        padding: 20px;
+
+        &__item{
+
+            &_image{
+                position: absolute;
+                top: 30px;
+                right: 20px;
+                width: 140px;
+                height: 140px;
+            }
+        }
+    }
+}
+
+@media(max-width: 450px){
+    .main-block{
+        padding: 20px;
+
+        &__temp{
+            font-size: 80px;
+        }
+        &__title{
+            font-size: 35px;
+            margin-bottom: 50px;
+        }
+        &__text{
+            font-size: 20px;
+        }
+
+        &__item{
+
+            &_image{
+                width: 120px;
+                height: 120px;
+            }
+        }
+    }
+}

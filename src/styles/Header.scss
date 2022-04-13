@@ -1,0 +1,166 @@
+/* ========== Глобальные переменные ========== */
+@import "variables";
+
+/* ========== Глобальные стили ========== */
+@import "global";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+
+    margin: 20px 0 30px 0;
+
+		&__img {
+            width: 65px;
+            height: 65px;
+
+            margin-right: 20px;
+
+            background-image: url("../img/header-logo.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+		}
+
+		&__title {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 30px;
+            text-transform: uppercase;
+            color: $blue-color-active;
+		}
+}
+.header-control {
+    display: flex;
+    align-items: center;
+}
+.change-theme {
+    width: 35px;
+    height: 35px;
+
+    margin-right: 20px;
+
+    background-image: url("../img/change-theme-icon.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.change-city {
+    padding: 9px 20px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    border-radius: 10px;
+}
+
+.btn:active{
+    transform: scale(0.9);
+}
+
+
+.search-city{
+    
+    &__form{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__input{
+        width: 200px;
+
+        padding: 9px 20px;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+    
+        border-radius:  10px 0 0 10px;
+        border: 1px solid rgba($color: #000000, $alpha: 0);
+        transition: border 0.2s;
+    }
+
+    &__input:focus{
+        border: 1px solid $grey-color-text
+    }
+
+    &__btn{
+        padding: 10px 15px 4px 9px;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        border-radius: 0 10px 10px 0;
+        transition: background-color 0.2s;
+
+    }
+
+    &__btn:hover{
+        background-color: $grey-color-text;
+    }
+
+    &__btn:active{
+        transform: scale(0.95);
+    }
+}
+
+.active-input{
+    border: 1px solid red;
+}
+
+
+
+// медиа запросы
+@media(max-width: 850px){
+    
+    .header {
+       padding: 20px 0;
+    }
+
+    .header-logo{
+        width: 100%;
+        margin: 0;
+
+        &__img{
+            width: 50px;
+            height: 50px;
+        } 
+    }
+
+}
+
+@media(max-width: 700px){
+    
+    .header-logo{
+        justify-content: space-between;
+       
+        &__img{
+            display: none;
+        }
+    }
+
+    .header-control{
+        width: 100%;
+        justify-content: flex-end;
+        margin: 0;
+    }
+}
+
+@media(max-width: 590px){
+    
+    .header-logo{
+        display: none;
+    }
+
+    .header-control{
+        justify-content: space-between;
+    }
+}

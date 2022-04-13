@@ -1,0 +1,21 @@
+/* ========== Глобальные переменные ========== */
+@import "../variables.scss";
+
+/* ========== Глобальные переменные ========== */
+@import "../global.scss";
+
+
+.current-weather{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0  0 50px 0; 
+}
+
+// медиа запросы
+@media(max-width: 850px){
+    
+    .current-weather{
+        flex-direction: column;
+    } 
+}

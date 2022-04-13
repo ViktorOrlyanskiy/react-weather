@@ -1,0 +1,84 @@
+/* ========== Глобальные переменные ========== */
+@import "../variables.scss";
+
+/* ========== Глобальные переменные ========== */
+@import "../global.scss";
+
+.menu {
+    &__list {
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        margin-bottom: 7px;
+    }
+
+    &__link {
+        margin-right: 15px;
+        padding-bottom: 7px;
+
+        &_navlink {
+            display: block;
+            text-align: center;
+            padding: 8px 20px;
+            box-shadow: $box-shadow;
+            border-radius: 5px;
+
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}
+
+.menu__link:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+}
+
+.menu__link:nth-child(1),
+.menu__link:nth-child(2),
+.menu__link:nth-child(3) {
+    .active {
+        background-color: $blue-color-active;
+        color: $light-color-text;
+    }
+}
+
+// медиа запросы
+@media (max-width: 620px) {
+    .menu__list {
+        position: static;
+        flex-wrap: wrap;
+    }
+
+    .menu__link {
+        flex: 1 1 45%;
+        margin: 0 10px;
+        margin-bottom: 10px;
+
+        &_navlink {
+            padding: 8px 10px;
+        }
+    }
+    .menu__link:nth-child(even) {
+        margin: 0 10px;
+    }
+    .menu__link:last-child {
+        position: static;
+    }
+}
+
+// медиа запросы
+@media (max-width: 450px) {
+    .menu__link {
+        margin: 0 5px;
+        margin-bottom: 10px;
+    }
+    .menu__link:nth-child(even) {
+        margin: 0 5px;
+    }
+}

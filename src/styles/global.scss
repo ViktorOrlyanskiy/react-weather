@@ -1,0 +1,38 @@
+.container{
+    max-width: 1230px;
+   
+    padding: 0 15px;
+    margin: 0 auto;
+
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+
+    user-select: none;
+}
+
+.sun{
+    background-image: url("../img/icons/sun.svg");
+}
+.rain{
+    background-image: url("../img/icons/rain.svg");
+}
+.small-rain{
+    background-image: url("../img/icons/small-rain.svg");
+}
+.small-rain-sun{
+    background-image: url("../img/icons/small-rain-sun.svg");
+}
+.mainly-cloudy{
+    background-image: url("../img/icons/mainly-cloudy.svg");
+}
+
+
+// медиа запросы
+@media(max-width: 850px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+}

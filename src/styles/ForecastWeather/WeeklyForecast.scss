@@ -1,0 +1,25 @@
+/* ========== Глобальные переменные ========== */
+@import "../variables.scss";
+
+/* ========== Глобальные переменные ========== */
+@import "../global.scss";
+
+.weekly-forecast{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+
+    height: 100%;
+}
+
+
+// медиа запросы для перехода от карточек к таблице
+@media (max-width:1220px){
+    .weekly-forecast{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 20px 0;
+    }
+}

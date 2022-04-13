@@ -1,0 +1,18 @@
+/* ========== Глобальные переменные ========== */
+@import "../variables.scss";
+
+/* ========== Глобальные переменные ========== */
+@import "../global.scss";
+
+
+.forecast-weather{
+
+    &__body{
+        min-height: 240px;
+        
+        padding: 0 8px;
+
+        box-shadow: $box-shadow;
+        border-radius: 0px 0px 20px 20px;
+    }
+}

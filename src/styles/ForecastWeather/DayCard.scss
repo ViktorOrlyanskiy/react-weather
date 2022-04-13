@@ -1,0 +1,291 @@
+/* ========== Глобальные переменные ========== */
+@import "../variables.scss";
+
+/* ========== Глобальные переменные ========== */
+@import "../global.scss";
+
+.day-card {
+    flex: 1 0 150px;
+
+    min-width: 150px;
+    max-width: 150px;
+    height: 200px; 
+    
+    padding: 11px;
+    margin: 20px 8px;
+
+    border-radius: 10px;
+
+    &__title {  
+        margin-bottom: 7px;
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.8px;
+    }
+
+    &__subtitle {
+        margin-bottom: 13px;
+
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &__image {
+        width: 48px;
+        height: 48px;
+
+        margin-bottom: 13px;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__temp {
+
+        &_day {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        &_night {
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+    }
+
+    &__description {
+        font-size: 13px;
+        line-height: 16px;
+        color: $grey-color-text;
+    }
+
+    
+}
+
+
+// медиа запросы для перехода от карточек к таблице
+@media (max-width:1220px){
+    .day-card {
+        // сброс старых стилей
+        min-width: none;
+        max-width: none;
+        height: auto;
+        padding: 0;
+        margin: 0;
+
+        // новые стили
+        flex: 1 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+            
+        padding: 5px 20px;
+        margin-bottom: 10px;
+
+        background: $blue-color-bg;
+    
+    
+        &__title {  
+            flex: 1 0 auto;
+            max-width: 100px;
+            min-width: 100px;
+            margin: 0;
+            margin-right: 3%;
+            padding: 0 5px;
+        }
+    
+        &__subtitle {
+            flex: 0 0 10%;
+            min-width: max-content;
+            margin: 0;
+            margin-right: 5%;
+            padding: 0 5px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    
+        &__image {
+            flex: 0 0 auto;
+               
+            margin: 0;
+            margin-right: 5%;
+            padding: 0;
+        }
+    
+        &__temp {
+            
+            &_day {
+                flex: 0 0 5%;
+                margin: 0;
+                padding: 0 5px;
+            }
+    
+            &_night {
+                flex: 1 0 5%;
+                margin: 0;
+                margin-right: 10%;
+                padding: 0 5px;
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    
+        &__description {
+            flex: 1 1 20%;
+            margin: 0;
+            padding: 0 5px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}
+
+@media (max-width:550px){
+    .day-card {
+        padding: 5px 5px;
+    }
+}
+
+// стили для табличного варианта отображения
+.day-card {
+    flex: 1 0 auto;
+
+
+    &__line{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+            
+        padding: 5px 20px;
+        margin-bottom: 10px;
+
+        border-radius: 10px;
+        background: $blue-color-bg;
+    }
+
+    &__title {  
+        flex: 1 0 auto;
+        max-width: max-content;
+        margin: 0;
+        margin-right: 3%;
+        padding: 0 5px;
+    }
+
+    &__subtitle {
+        flex: 0 0 10%;
+        margin: 0;
+        margin-right: 5%;
+        padding: 0 5px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    &__image {
+        flex: 0 0 auto;
+        width: 48px;
+        height: 48px;
+
+        margin: 0;
+        margin-right: 5%;
+        padding: 0;
+    }
+
+    &__temp {
+        
+        &_day {
+            flex: 0 0 5%;
+            margin: 0;
+            padding: 0 5px;
+        }
+
+        &_night {
+            flex: 0 0 5%;
+            margin: 0;
+            margin-right: 10%;
+            padding: 0 5px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    &__description {
+        flex: 1 0 20%;
+        margin: 0;
+        padding: 0 5px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+
+// медиа запросы
+@media (max-width:760px) {
+    .day-card {
+    
+        &__line{
+            padding: 0 10px;
+        }
+    
+        &__title {  
+            margin-right: 2%;
+        }
+    
+        &__subtitle {
+            margin-right: 2%;
+        }
+    
+        &__image {
+            margin-right: 2%;
+        }
+    
+        &__temp {
+            
+            &_night {
+                margin-right: 2%;
+            }
+        }
+    
+        &__description {
+            margin: 0;   
+        }
+    }
+}
+
+@media (max-width:550px) {
+    .day-card {
+    
+        &__line{
+            padding: 0;
+        }
+    
+        &__title {    
+            margin: 0;
+        }
+    
+        &__subtitle {
+            display: none;
+        }
+    
+        &__image {
+            margin-right: 2%;
+            padding: 0;
+        }
+    
+        &__temp {
+            
+            &_day { 
+                padding: 0 2px;
+                margin-right: 0;
+            }
+    
+            &_night {
+                padding: 0 2px;
+                margin-right: 0;
+            }
+        }
+    }
+}
